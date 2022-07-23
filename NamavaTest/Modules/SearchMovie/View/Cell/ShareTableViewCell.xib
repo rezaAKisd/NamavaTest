@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="353" id="KGk-i7-Jjw" customClass="ShareTableViewCell" customModule="NamavaTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="526" height="353"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="526" height="353"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A47-df-cHO">
+                        <rect key="frame" x="0.0" y="0.0" width="526" height="353"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5Uo-3z-l4m">
+                                <rect key="frame" x="213" y="97" width="100" height="98.5"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Lk7-Q1-rUO"/>
+                                    <constraint firstAttribute="height" constant="100" id="OrA-Ou-m3N"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لطفا برای نمایش ویدیو عنوانی را جستوجو کنید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYi-KT-C3g">
+                                <rect key="frame" x="0.0" y="212.5" width="526" height="20.5"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MYi-KT-C3g" firstAttribute="top" secondItem="5Uo-3z-l4m" secondAttribute="bottom" constant="16" id="2YH-ad-YvP"/>
+                            <constraint firstItem="5Uo-3z-l4m" firstAttribute="centerX" secondItem="A47-df-cHO" secondAttribute="centerX" id="IqX-UK-Bnb"/>
+                            <constraint firstAttribute="trailing" secondItem="MYi-KT-C3g" secondAttribute="trailing" id="JlJ-FW-Ik4"/>
+                            <constraint firstItem="5Uo-3z-l4m" firstAttribute="centerY" secondItem="A47-df-cHO" secondAttribute="centerY" constant="-30" id="W9d-h3-iWK"/>
+                            <constraint firstItem="MYi-KT-C3g" firstAttribute="leading" secondItem="A47-df-cHO" secondAttribute="leading" id="X7U-1h-oiG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="A47-df-cHO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5Wp-up-FjY"/>
+                    <constraint firstItem="A47-df-cHO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ndf-OF-MDS"/>
+                    <constraint firstAttribute="bottom" secondItem="A47-df-cHO" secondAttribute="bottom" id="wm5-g1-cjb"/>
+                    <constraint firstAttribute="trailing" secondItem="A47-df-cHO" secondAttribute="trailing" id="xg1-Vz-3ur"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="shareImageView" destination="5Uo-3z-l4m" id="75N-mE-xhS"/>
+                <outlet property="shareLabel" destination="MYi-KT-C3g" id="pO6-xH-P0D"/>
+            </connections>
+            <point key="canvasLocation" x="286.95652173913044" y="178.45982142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -9,16 +9,6 @@ import Moya
 import Resolver
 import RxSwift
 
-enum MyAPIError: Error {
-    case requestNotFormed
-    
-    var errorDescription: String? {
-        switch self {
-        case .requestNotFormed: return "request not found."
-        }
-    }
-}
-
 final class NetworkAdapter{
     @Injected var provider: MoyaProvider<MultiTarget>
     

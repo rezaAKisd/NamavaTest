@@ -18,7 +18,9 @@ class AppCoordinator: Coordinator {
     func start() {
         navigationController.navigationBar.isHidden = true
         
-        //To Do
+        let searchMovieCoordinator = SearchMovieCoordinator(navigationController: navigationController)
+        childCoordinators.append(searchMovieCoordinator)
+        coordinate(to: searchMovieCoordinator)
     }
 }
 
