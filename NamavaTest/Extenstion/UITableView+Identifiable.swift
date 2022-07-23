@@ -9,6 +9,14 @@ import UIKit
 
 extension UITableView {
     
+    open override func draw(_ rect: CGRect) {
+        if #available(iOS 15.0, *) {
+            self.sectionHeaderTopPadding = 0.0
+        }
+        
+        self.keyboardDismissMode = .onDrag
+    }
+    
     func register<T: UITableViewCell>(cellType: T.Type) {
         let nibFile = UINib(nibName: T.identity, bundle: nil)
         self.register(nibFile, forCellReuseIdentifier: T.identity)

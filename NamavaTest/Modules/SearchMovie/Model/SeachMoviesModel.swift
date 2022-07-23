@@ -34,6 +34,7 @@ extension SeachMoviesModel {
             .searchMovie(for: text)
             .asObservable()
             .share()
+            .catchAndReturn([])
             .bind(to: movies)
             .disposed(by: disposeBag)
     }

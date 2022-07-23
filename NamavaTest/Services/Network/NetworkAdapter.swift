@@ -15,6 +15,7 @@ final class NetworkAdapter{
     func request<T: TargetType>(_ target: T) -> Single<Response> {
         return provider.rx
                .request(MultiTarget(target))
+               .filterSuccessfulStatusCodes()
                .filterSuccess()
                .observe(on: MainScheduler.instance)
     }
