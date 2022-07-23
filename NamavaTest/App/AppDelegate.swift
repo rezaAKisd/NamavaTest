@@ -11,6 +11,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var coordinator: AppCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -18,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UINavigationController()
         window?.rootViewController?.view.backgroundColor = .white
         
+        coordinator = AppCoordinator(navigationController: window?.rootViewController as! UINavigationController)
+                coordinator?.start()
+
         
         window?.makeKeyAndVisible()
         return true

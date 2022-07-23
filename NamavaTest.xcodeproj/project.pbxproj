@@ -11,6 +11,12 @@
 		F5794C53288BB7AA00F25393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5794C52288BB7AA00F25393 /* AppDelegate.swift */; };
 		F5794C5C288BB7AF00F25393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5794C5B288BB7AF00F25393 /* Assets.xcassets */; };
 		F5794C5F288BB7AF00F25393 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5794C5D288BB7AF00F25393 /* LaunchScreen.storyboard */; };
+		F5794C6F288BC20000F25393 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5794C6E288BC1FF00F25393 /* Coordinator.swift */; };
+		F5794C71288BC22400F25393 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5794C70288BC22400F25393 /* AppCoordinator.swift */; };
+		F5794C73288BC2F700F25393 /* _AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5794C72288BC2F700F25393 /* _AppDelegate+Injection.swift */; };
+		F5794C75288BC31C00F25393 /* _Services+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5794C74288BC31C00F25393 /* _Services+Injection.swift */; };
+		F5794C79288BC34B00F25393 /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5794C78288BC34B00F25393 /* NetworkAdapter.swift */; };
+		F5794C7B288BD28E00F25393 /* RxSwift+MoyaMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5794C7A288BD28E00F25393 /* RxSwift+MoyaMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		F5794C5B288BB7AF00F25393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5794C5E288BB7AF00F25393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5794C60288BB7B000F25393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5794C6E288BC1FF00F25393 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F5794C70288BC22400F25393 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F5794C72288BC2F700F25393 /* _AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_AppDelegate+Injection.swift"; sourceTree = "<group>"; };
+		F5794C74288BC31C00F25393 /* _Services+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_Services+Injection.swift"; sourceTree = "<group>"; };
+		F5794C78288BC34B00F25393 /* NetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
+		F5794C7A288BD28E00F25393 /* RxSwift+MoyaMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+MoyaMapper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,7 @@
 				F5794C60288BB7B000F25393 /* Info.plist */,
 				F5794C6D288BBD5300F25393 /* App */,
 				F5794C6B288BBD4700F25393 /* Coordinator */,
+				F5794C6C288BBD4E00F25393 /* Constant */,
 				F5794C6A288BBD4000F25393 /* Extenstion */,
 				F5794C69288BBD3C00F25393 /* Extra */,
 				F5794C68288BBD3100F25393 /* Modules */,
@@ -89,6 +102,8 @@
 		F5794C66288BBD1800F25393 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F5794C76288BC32F00F25393 /* DI */,
+				F5794C77288BC33600F25393 /* Network */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -96,7 +111,6 @@
 		F5794C67288BBD2A00F25393 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F5794C6C288BBD4E00F25393 /* Constant */,
 				F5794C5B288BB7AF00F25393 /* Assets.xcassets */,
 				F5794C5D288BB7AF00F25393 /* LaunchScreen.storyboard */,
 			);
@@ -120,6 +134,7 @@
 		F5794C6A288BBD4000F25393 /* Extenstion */ = {
 			isa = PBXGroup;
 			children = (
+				F5794C7A288BD28E00F25393 /* RxSwift+MoyaMapper.swift */,
 			);
 			path = Extenstion;
 			sourceTree = "<group>";
@@ -127,6 +142,7 @@
 		F5794C6B288BBD4700F25393 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				F5794C6E288BC1FF00F25393 /* Coordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -142,8 +158,26 @@
 			isa = PBXGroup;
 			children = (
 				F5794C52288BB7AA00F25393 /* AppDelegate.swift */,
+				F5794C70288BC22400F25393 /* AppCoordinator.swift */,
+				F5794C72288BC2F700F25393 /* _AppDelegate+Injection.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		F5794C76288BC32F00F25393 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F5794C74288BC31C00F25393 /* _Services+Injection.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		F5794C77288BC33600F25393 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F5794C78288BC34B00F25393 /* NetworkAdapter.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +294,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5794C7B288BD28E00F25393 /* RxSwift+MoyaMapper.swift in Sources */,
+				F5794C79288BC34B00F25393 /* NetworkAdapter.swift in Sources */,
+				F5794C73288BC2F700F25393 /* _AppDelegate+Injection.swift in Sources */,
+				F5794C71288BC22400F25393 /* AppCoordinator.swift in Sources */,
+				F5794C6F288BC20000F25393 /* Coordinator.swift in Sources */,
+				F5794C75288BC31C00F25393 /* _Services+Injection.swift in Sources */,
 				F5794C53288BB7AA00F25393 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
