@@ -34,6 +34,10 @@ class SearchMovieViewController: UIViewController {
         configureSearchBar()
         bindFrom()
     }
+    
+    deinit{
+        coordinator?.removeFromParent()
+    }
 }
 
 

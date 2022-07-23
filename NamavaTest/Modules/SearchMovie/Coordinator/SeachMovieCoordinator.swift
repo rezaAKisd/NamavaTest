@@ -8,13 +8,17 @@
 import UIKit
 import Resolver
 
-protocol SearchMovieFlow: AnyObject {
+protocol SearchMovieFlow: Coordinator {
     func coordinateToMovieDetail(for movie: MovieEntity)
 }
 
-class SearchMovieCoordinator: Coordinator, SearchMovieFlow {
+class SearchMovieCoordinator: SearchMovieFlow {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
+    
+    lazy var movieDetailCoordinator: MovieDetailCoordinator = {
+        return MovieDetailCoordinator(navigationController: navigationController)
+    }()
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -28,7 +32,6 @@ class SearchMovieCoordinator: Coordinator, SearchMovieFlow {
     
     // MARK: - Flow Methods
     func coordinateToMovieDetail(for movie: MovieEntity) {
-        let movieDetailCoordinator = MovieDetailCoordinator(navigationController: navigationController)
         movieDetailCoordinator.movie = movie
         childCoordinators.append(movieDetailCoordinator)
         coordinate(to: movieDetailCoordinator)

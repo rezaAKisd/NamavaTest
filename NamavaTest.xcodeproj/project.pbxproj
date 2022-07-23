@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		20DEF263805442CB9864E589 /* Pods_NamavaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F15DCCAAD3E306A838C155 /* Pods_NamavaTest.framework */; };
+		F55B064C288C47EE008E6AC0 /* MoviePlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55B0640288C47EE008E6AC0 /* MoviePlayerViewModel.swift */; };
+		F55B064D288C47EE008E6AC0 /* MoviePlayerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55B0642288C47EE008E6AC0 /* MoviePlayerCoordinator.swift */; };
+		F55B064E288C47EE008E6AC0 /* _MoviePlayer+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55B0644288C47EE008E6AC0 /* _MoviePlayer+Injection.swift */; };
+		F55B064F288C47EE008E6AC0 /* MoviePlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55B0646288C47EE008E6AC0 /* MoviePlayerModel.swift */; };
+		F55B0650288C47EE008E6AC0 /* MoviePlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F55B0648288C47EE008E6AC0 /* MoviePlayerViewController.xib */; };
+		F55B0651288C47EE008E6AC0 /* MoviePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55B064A288C47EE008E6AC0 /* MoviePlayerViewController.swift */; };
 		F5794C53288BB7AA00F25393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5794C52288BB7AA00F25393 /* AppDelegate.swift */; };
 		F5794C5C288BB7AF00F25393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5794C5B288BB7AF00F25393 /* Assets.xcassets */; };
 		F5794C5F288BB7AF00F25393 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5794C5D288BB7AF00F25393 /* LaunchScreen.storyboard */; };
@@ -52,6 +58,12 @@
 		0F6EE69EC971FA4FC65AD070 /* Pods-NamavaTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NamavaTest.debug.xcconfig"; path = "Target Support Files/Pods-NamavaTest/Pods-NamavaTest.debug.xcconfig"; sourceTree = "<group>"; };
 		3729E95F7296B9E1CBC036C6 /* Pods-NamavaTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NamavaTest.release.xcconfig"; path = "Target Support Files/Pods-NamavaTest/Pods-NamavaTest.release.xcconfig"; sourceTree = "<group>"; };
 		B0F15DCCAAD3E306A838C155 /* Pods_NamavaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NamavaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F55B0640288C47EE008E6AC0 /* MoviePlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePlayerViewModel.swift; sourceTree = "<group>"; };
+		F55B0642288C47EE008E6AC0 /* MoviePlayerCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePlayerCoordinator.swift; sourceTree = "<group>"; };
+		F55B0644288C47EE008E6AC0 /* _MoviePlayer+Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "_MoviePlayer+Injection.swift"; sourceTree = "<group>"; };
+		F55B0646288C47EE008E6AC0 /* MoviePlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePlayerModel.swift; sourceTree = "<group>"; };
+		F55B0648288C47EE008E6AC0 /* MoviePlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviePlayerViewController.xib; sourceTree = "<group>"; };
+		F55B064A288C47EE008E6AC0 /* MoviePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePlayerViewController.swift; sourceTree = "<group>"; };
 		F5794C4F288BB7AA00F25393 /* NamavaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NamavaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5794C52288BB7AA00F25393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5794C5B288BB7AF00F25393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,6 +135,75 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F55B063E288C47EE008E6AC0 /* MoviePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				F55B0643288C47EE008E6AC0 /* DI */,
+				F55B0641288C47EE008E6AC0 /* Coordinator */,
+				F55B064B288C47EE008E6AC0 /* Services */,
+				F55B0645288C47EE008E6AC0 /* Model */,
+				F55B0647288C47EE008E6AC0 /* View */,
+				F55B063F288C47EE008E6AC0 /* ViewModel */,
+			);
+			path = MoviePlayer;
+			sourceTree = "<group>";
+		};
+		F55B063F288C47EE008E6AC0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F55B0640288C47EE008E6AC0 /* MoviePlayerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F55B0641288C47EE008E6AC0 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F55B0642288C47EE008E6AC0 /* MoviePlayerCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F55B0643288C47EE008E6AC0 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F55B0644288C47EE008E6AC0 /* _MoviePlayer+Injection.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		F55B0645288C47EE008E6AC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F55B0646288C47EE008E6AC0 /* MoviePlayerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F55B0647288C47EE008E6AC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F55B0648288C47EE008E6AC0 /* MoviePlayerViewController.xib */,
+				F55B0649288C47EE008E6AC0 /* Cell */,
+				F55B064A288C47EE008E6AC0 /* MoviePlayerViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F55B0649288C47EE008E6AC0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F55B064B288C47EE008E6AC0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		F5794C46288BB7AA00F25393 = {
 			isa = PBXGroup;
 			children = (
@@ -180,7 +261,7 @@
 			children = (
 				F5794C7E288BD52E00F25393 /* SearchMovie */,
 				F5794CB6288BF1DE00F25393 /* MovieDetail */,
-				F5794CC0288BF1DE00F25393 /* ViewModel */,
+				F55B063E288C47EE008E6AC0 /* MoviePlayer */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -359,6 +440,7 @@
 				F5794CC5288BF1DE00F25393 /* Services */,
 				F5794CBB288BF1DE00F25393 /* Model */,
 				F5794CBF288BF1DE00F25393 /* View */,
+				F5794CC0288BF1DE00F25393 /* ViewModel */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -480,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5794CD0288BF1DE00F25393 /* MovieDetailViewController.xib in Resources */,
+				F55B0650288C47EE008E6AC0 /* MoviePlayerViewController.xib in Resources */,
 				F5794C5F288BB7AF00F25393 /* LaunchScreen.storyboard in Resources */,
 				F5794CAB288BDA4E00F25393 /* ShareTableViewCell.xib in Resources */,
 				F5794CAA288BDA4E00F25393 /* MovieCardTableViewCell.xib in Resources */,
@@ -546,10 +629,13 @@
 				F5794CCF288BF1DE00F25393 /* MovieDetailViewController.swift in Sources */,
 				F5794CC9288BF1DE00F25393 /* MovieDetailCoordinator.swift in Sources */,
 				F5794CAF288BDA5D00F25393 /* SearchMovieViewController.swift in Sources */,
+				F55B064E288C47EE008E6AC0 /* _MoviePlayer+Injection.swift in Sources */,
 				F5794C97288BD71100F25393 /* SearchMovieEntity.swift in Sources */,
 				F5794C95288BD71100F25393 /* SearchMovie.swift in Sources */,
+				F55B064C288C47EE008E6AC0 /* MoviePlayerViewModel.swift in Sources */,
 				F5794C98288BD71100F25393 /* ConnectionEntity.swift in Sources */,
 				F5794CA9288BDA4E00F25393 /* ShareTableViewCell.swift in Sources */,
+				F55B064D288C47EE008E6AC0 /* MoviePlayerCoordinator.swift in Sources */,
 				F5794C96288BD71100F25393 /* MetaDataEntity.swift in Sources */,
 				F5794C7B288BD28E00F25393 /* RxSwift+MoyaMapper.swift in Sources */,
 				F5794C79288BC34B00F25393 /* NetworkAdapter.swift in Sources */,
@@ -567,8 +653,10 @@
 				F5794C7D288BD4EE00F25393 /* MyAPIError.swift in Sources */,
 				F5794CAC288BDA4E00F25393 /* MovieCardTableViewCell.swift in Sources */,
 				F5794C86288BD58300F25393 /* _SearchMovie+Injection.swift in Sources */,
+				F55B0651288C47EE008E6AC0 /* MoviePlayerViewController.swift in Sources */,
 				F5794C75288BC31C00F25393 /* _Services+Injection.swift in Sources */,
 				F5794C53288BB7AA00F25393 /* AppDelegate.swift in Sources */,
+				F55B064F288C47EE008E6AC0 /* MoviePlayerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

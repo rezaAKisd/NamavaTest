@@ -10,10 +10,6 @@ import RxCocoa
 import RxSwiftExt
 import Resolver
 
-protocol MovieDetailViewModelProtocol {
-    mutating func didSelectCountry(with name: String?)
-}
-
 struct MovieDetailViewModel {
     
     let disposeBag = DisposeBag()
@@ -32,4 +28,5 @@ struct MovieDetailViewModel {
             .disposed(by: disposeBag)
     }
 }
+
 

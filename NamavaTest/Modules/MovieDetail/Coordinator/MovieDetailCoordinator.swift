@@ -8,15 +8,18 @@
 import Foundation
 import Resolver
 
-protocol MovieDetailFlow: AnyObject {
-    func coordinateToMoviePlayer(with movie: MovieEntity)
+protocol MovieDetailFlow: Coordinator {
+    func coordinateToMoviePlayer(with movie: MovieEntity?)
 }
 
-class MovieDetailCoordinator: Coordinator, MovieDetailFlow {
+class MovieDetailCoordinator: MovieDetailFlow {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
-    
     var movie: MovieEntity!
+    
+    lazy var moviePlayerCoordinator: MoviePlayerCoordinator = {
+        return MoviePlayerCoordinator(navigationController: navigationController)
+    }()
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -30,7 +33,9 @@ class MovieDetailCoordinator: Coordinator, MovieDetailFlow {
     }
     
     // MARK: - Flow Methods
-    func coordinateToMoviePlayer(with movie: MovieEntity) {
-        //To Do
+    func coordinateToMoviePlayer(with movie: MovieEntity?) {
+        moviePlayerCoordinator.movie = movie
+        childCoordinators.append(moviePlayerCoordinator)
+        coordinate(to: moviePlayerCoordinator)
     }
 }

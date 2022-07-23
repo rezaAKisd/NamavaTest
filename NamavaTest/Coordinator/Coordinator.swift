@@ -13,10 +13,15 @@ protocol Coordinator: AnyObject {
     
     func start()
     func coordinate(to coordinator: Coordinator)
+    func removeFromParent()
 }
 
 extension Coordinator {
     func coordinate(to coordinator: Coordinator) {
         coordinator.start()
+    }
+    
+    func removeFromParent(){
+        childCoordinators.removeAll()
     }
 }
