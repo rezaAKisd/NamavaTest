@@ -16,16 +16,14 @@ struct SearchMovieViewModel {
     let section = PublishSubject<MovieSectionModelType?>()
     let searchText: BehaviorRelay<String?> = .init(value: nil)
     
-    @Injected private var model: MoviesModel
-    
-    private(set) var selectedCountries: [String] = []
+    @Injected private var model: SeachMoviesModel
     
     init(){                  
-        subscribeCountriesFromModel()
+        subscribeMoviesFromModel()
         subscribeOnSearch()
     }
     
-    private func subscribeCountriesFromModel() {
+    private func subscribeMoviesFromModel() {
         model.movies
             .asObservable()
             .toMovieSectionCellItems()

@@ -10,9 +10,13 @@ import Kingfisher
 
 class MovieCardTableViewCell: UITableViewCell {
 
+    //MARK: -Outlets
+    
     @IBOutlet weak var movieImageView: UIImageView!
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    
+    //MARK: -LifeCycle
     
     override func awakeFromNib() {
         super.awakeFromNib()

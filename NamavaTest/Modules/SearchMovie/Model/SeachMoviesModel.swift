@@ -9,7 +9,7 @@ import RxSwift
 import RxCocoa
 import Resolver
 
-struct MoviesModel {
+struct SeachMoviesModel {
     
     @Injected var service: SearchMovieServiceProtocol
     let disposeBag = DisposeBag()
@@ -19,7 +19,7 @@ struct MoviesModel {
 }
 
 
-extension MoviesModel {
+extension SeachMoviesModel {
     
     func searchMovieWith(text: String?) {
         guard let `text` = text,

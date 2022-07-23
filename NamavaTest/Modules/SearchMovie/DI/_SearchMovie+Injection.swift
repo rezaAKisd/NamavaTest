@@ -12,7 +12,7 @@ extension Resolver {
     public static func registerSearchMovie() {
         defaultScope = .graph
         
-        register { MoviesModel() }
+        register { SeachMoviesModel() }
         register { SearchMovieService() as SearchMovieServiceProtocol }
         register { SearchMovieViewModel() }
         register { SearchMovieViewController() }

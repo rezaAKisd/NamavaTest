@@ -13,5 +13,6 @@ extension Resolver: ResolverRegistering {
         
         registerServices()
         registerSearchMovie()
+        registerMovieDetail()
     }
 }

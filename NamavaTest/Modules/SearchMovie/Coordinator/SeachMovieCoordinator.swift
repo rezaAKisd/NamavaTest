@@ -28,6 +28,9 @@ class SearchMovieCoordinator: Coordinator, SearchMovieFlow {
     
     // MARK: - Flow Methods
     func coordinateToMovieDetail(for movie: MovieEntity) {
-        //To Do
+        let movieDetailCoordinator = MovieDetailCoordinator(navigationController: navigationController)
+        movieDetailCoordinator.movie = movie
+        childCoordinators.append(movieDetailCoordinator)
+        coordinate(to: movieDetailCoordinator)
     }
 }

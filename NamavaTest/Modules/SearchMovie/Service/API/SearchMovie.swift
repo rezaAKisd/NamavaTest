@@ -13,7 +13,6 @@ enum SearchMovie{
 
 extension SearchMovie: TargetType{
     public var baseURL: URL {
-        // TODO: Need Refactor
         return URL(string: "https://api.vimeo.com")!
     }
 

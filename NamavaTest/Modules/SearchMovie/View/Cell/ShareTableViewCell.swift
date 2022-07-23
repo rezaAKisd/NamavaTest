@@ -16,11 +16,18 @@ enum ShareTableCellType{
 
 class ShareTableViewCell: UITableViewCell {
 
+    //MARK: -Outlet
+    
     @IBOutlet weak var shareImageView: UIImageView!
     @IBOutlet weak var shareLabel: UILabel!
     
+    
+    //MARK: -Properties
+    
     let disposeBag = DisposeBag()
     let cellType: BehaviorRelay<ShareTableCellType> = .init(value: .placeholder)
+    
+    //MARK: -LifeCycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
