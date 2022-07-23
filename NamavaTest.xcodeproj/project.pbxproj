@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		20DEF263805442CB9864E589 /* Pods_NamavaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F15DCCAAD3E306A838C155 /* Pods_NamavaTest.framework */; };
 		F5794C53288BB7AA00F25393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5794C52288BB7AA00F25393 /* AppDelegate.swift */; };
-		F5794C55288BB7AA00F25393 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5794C54288BB7AA00F25393 /* SceneDelegate.swift */; };
-		F5794C57288BB7AA00F25393 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5794C56288BB7AA00F25393 /* ViewController.swift */; };
-		F5794C5A288BB7AA00F25393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5794C58288BB7AA00F25393 /* Main.storyboard */; };
 		F5794C5C288BB7AF00F25393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5794C5B288BB7AF00F25393 /* Assets.xcassets */; };
 		F5794C5F288BB7AF00F25393 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5794C5D288BB7AF00F25393 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -22,9 +19,6 @@
 		B0F15DCCAAD3E306A838C155 /* Pods_NamavaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NamavaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5794C4F288BB7AA00F25393 /* NamavaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NamavaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5794C52288BB7AA00F25393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5794C54288BB7AA00F25393 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F5794C56288BB7AA00F25393 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F5794C59288BB7AA00F25393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5794C5B288BB7AF00F25393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5794C5E288BB7AF00F25393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5794C60288BB7B000F25393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,7 +50,6 @@
 				0F6EE69EC971FA4FC65AD070 /* Pods-NamavaTest.debug.xcconfig */,
 				3729E95F7296B9E1CBC036C6 /* Pods-NamavaTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +74,76 @@
 		F5794C51288BB7AA00F25393 /* NamavaTest */ = {
 			isa = PBXGroup;
 			children = (
-				F5794C52288BB7AA00F25393 /* AppDelegate.swift */,
-				F5794C54288BB7AA00F25393 /* SceneDelegate.swift */,
-				F5794C56288BB7AA00F25393 /* ViewController.swift */,
-				F5794C58288BB7AA00F25393 /* Main.storyboard */,
-				F5794C5B288BB7AF00F25393 /* Assets.xcassets */,
-				F5794C5D288BB7AF00F25393 /* LaunchScreen.storyboard */,
 				F5794C60288BB7B000F25393 /* Info.plist */,
+				F5794C6D288BBD5300F25393 /* App */,
+				F5794C6B288BBD4700F25393 /* Coordinator */,
+				F5794C6A288BBD4000F25393 /* Extenstion */,
+				F5794C69288BBD3C00F25393 /* Extra */,
+				F5794C68288BBD3100F25393 /* Modules */,
+				F5794C67288BBD2A00F25393 /* Resources */,
+				F5794C66288BBD1800F25393 /* Services */,
 			);
 			path = NamavaTest;
+			sourceTree = "<group>";
+		};
+		F5794C66288BBD1800F25393 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F5794C67288BBD2A00F25393 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5794C6C288BBD4E00F25393 /* Constant */,
+				F5794C5B288BB7AF00F25393 /* Assets.xcassets */,
+				F5794C5D288BB7AF00F25393 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F5794C68288BBD3100F25393 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F5794C69288BBD3C00F25393 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extra;
+			sourceTree = "<group>";
+		};
+		F5794C6A288BBD4000F25393 /* Extenstion */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extenstion;
+			sourceTree = "<group>";
+		};
+		F5794C6B288BBD4700F25393 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F5794C6C288BBD4E00F25393 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		F5794C6D288BBD5300F25393 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F5794C52288BB7AA00F25393 /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +208,6 @@
 			files = (
 				F5794C5F288BB7AF00F25393 /* LaunchScreen.storyboard in Resources */,
 				F5794C5C288BB7AF00F25393 /* Assets.xcassets in Resources */,
-				F5794C5A288BB7AA00F25393 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,23 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5794C57288BB7AA00F25393 /* ViewController.swift in Sources */,
 				F5794C53288BB7AA00F25393 /* AppDelegate.swift in Sources */,
-				F5794C55288BB7AA00F25393 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F5794C58288BB7AA00F25393 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F5794C59288BB7AA00F25393 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F5794C5D288BB7AF00F25393 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -361,7 +404,6 @@
 				INFOPLIST_FILE = NamavaTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -389,7 +431,6 @@
 				INFOPLIST_FILE = NamavaTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
