@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20DEF263805442CB9864E589 /* Pods_NamavaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F15DCCAAD3E306A838C155 /* Pods_NamavaTest.framework */; };
 		F5794C53288BB7AA00F25393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5794C52288BB7AA00F25393 /* AppDelegate.swift */; };
 		F5794C55288BB7AA00F25393 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5794C54288BB7AA00F25393 /* SceneDelegate.swift */; };
 		F5794C57288BB7AA00F25393 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5794C56288BB7AA00F25393 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F6EE69EC971FA4FC65AD070 /* Pods-NamavaTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NamavaTest.debug.xcconfig"; path = "Target Support Files/Pods-NamavaTest/Pods-NamavaTest.debug.xcconfig"; sourceTree = "<group>"; };
+		3729E95F7296B9E1CBC036C6 /* Pods-NamavaTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NamavaTest.release.xcconfig"; path = "Target Support Files/Pods-NamavaTest/Pods-NamavaTest.release.xcconfig"; sourceTree = "<group>"; };
+		B0F15DCCAAD3E306A838C155 /* Pods_NamavaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NamavaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5794C4F288BB7AA00F25393 /* NamavaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NamavaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5794C52288BB7AA00F25393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5794C54288BB7AA00F25393 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20DEF263805442CB9864E589 /* Pods_NamavaTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68E73FB99BC288FA72F8FE58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0F15DCCAAD3E306A838C155 /* Pods_NamavaTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		737F5647E9E8498E981570AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F6EE69EC971FA4FC65AD070 /* Pods-NamavaTest.debug.xcconfig */,
+				3729E95F7296B9E1CBC036C6 /* Pods-NamavaTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F5794C46288BB7AA00F25393 = {
 			isa = PBXGroup;
 			children = (
 				F5794C51288BB7AA00F25393 /* NamavaTest */,
 				F5794C50288BB7AA00F25393 /* Products */,
+				737F5647E9E8498E981570AD /* Pods */,
+				68E73FB99BC288FA72F8FE58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5794C63288BB7B000F25393 /* Build configuration list for PBXNativeTarget "NamavaTest" */;
 			buildPhases = (
+				D912582509539FFF53BCCEF5 /* [CP] Check Pods Manifest.lock */,
 				F5794C4B288BB7AA00F25393 /* Sources */,
 				F5794C4C288BB7AA00F25393 /* Frameworks */,
 				F5794C4D288BB7AA00F25393 /* Resources */,
+				F9C5DECB4B5A1CB4A1EA5DA4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D912582509539FFF53BCCEF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NamavaTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9C5DECB4B5A1CB4A1EA5DA4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NamavaTest/Pods-NamavaTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NamavaTest/Pods-NamavaTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NamavaTest/Pods-NamavaTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F5794C4B288BB7AA00F25393 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		F5794C64288BB7B000F25393 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F6EE69EC971FA4FC65AD070 /* Pods-NamavaTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +379,7 @@
 		};
 		F5794C65288BB7B000F25393 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3729E95F7296B9E1CBC036C6 /* Pods-NamavaTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
